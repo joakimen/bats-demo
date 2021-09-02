@@ -4,6 +4,8 @@
 
 Example usage of [bats](https://github.com/bats-core/bats-core) (Bash Automated Testing System)
 
+> Bats is a TAP-compliant testing framework for Bash. It provides a simple way to verify that the UNIX programs you write behave as expected.
+
 ## Usage
 
 ### Create a script
