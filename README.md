@@ -49,11 +49,26 @@ subject=./print_file.sh
 }
 ```
 
-### Run tests
+### Run (local install)
 
 ```sh
 $ bats .
  ✓ ./print_file.sh given no filename should return error
  ✓ ./print_file.sh given the name of a non-existent file should return error
  ✓ ./print_file.sh given the name of a existing file should return the file contents
+ 
+3 tests, 0 failure
+```
+
+### Run (Docker)
+
+```sh
+$ make run
+docker build -t bats-demo:$(git rev-parse --short @) .
+docker run -it --rm bats-demo:$(git rev-parse --short @)
+ ✓ ./print_file.sh given no filename should return error
+ ✓ ./print_file.sh given the name of a non-existent file should return error
+ ✓ ./print_file.sh given the name of a existing file should return the file contents
+ 
+3 tests, 0 failures
 ```
