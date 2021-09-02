@@ -9,7 +9,7 @@ subject=./print_file.sh
 @test "$subject given the name of a non-existent file should return error" {
   run "$subject" "angry-dog.png"
   [[ $status -eq 1 ]]
-  [[ $output = "cat: angry-dog.png: No such file or directory" ]]
+  [[ $output == *"No such file or directory" ]]
 }
 
 @test "$subject given the name of a existing file should return the file contents" {
