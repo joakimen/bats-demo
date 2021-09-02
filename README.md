@@ -1,5 +1,7 @@
 # bats-demo
 
+![build-badge](https://github.com/joakimen/bats-demo/actions/workflows/test.yaml/badge.svg)
+
 Example usage of [bats](https://github.com/bats-core/bats-core) (Bash Automated Testing System)
 
 ## Usage
